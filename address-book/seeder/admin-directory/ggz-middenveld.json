@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:034b8e22-1dd5-4e9a-8e29-16719c3eec5e",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "phyPL6I-9psE",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "77889900"
+      } ],
+      "active": true,
+      "name": "GGZ Middenveld",
+      "alias": [ "Middenveld" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "zorgdesk@ggzmiddenveld.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/phyPL6I-9psE"
+    }
+  } ]
+}

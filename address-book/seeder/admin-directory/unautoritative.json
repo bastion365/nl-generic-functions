@@ -1,0 +1,43 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:acdad0fd-a168-40c4-b12c-d8b882b5b8ba",
+            "id": "HAHj1EwW1D0V",
+            "resource": {
+                "resourceType": "Organization",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "67868723"
+                }],
+                "active": true,
+                "name": "Unauthoritative Org"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/HAHj1EwW1D0V"
+            }
+        }, {
+            "fullUrl": "urn:uuid:22c010a9-6648-4e48-8b8f-273c4cce3c68",
+            "id": "i2x3J3AmmJ0m",
+            "resource": {
+                "resourceType": "Location",
+                "name": "Unauthoritative Location",
+                "address": {
+                    "type": "physical",
+                    "line": ["Achterdijk 99"],
+                    "city": "Juinen",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:acdad0fd-a168-40c4-b12c-d8b882b5b8ba"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Location/i2x3J3AmmJ0m"
+            }
+        }
+    ]
+}

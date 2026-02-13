@@ -1,0 +1,62 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:2c52a424-6e7a-4b7d-bafc-ab61dcde4f31",
+    "resource": {
+      "resourceType": "Location",
+      "id": "BQfXbI4-mdHC",
+      "name": "Parklaan",
+      "telecom": [ {
+        "system": "email",
+        "value": "parklaan@lindenstaete.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:1786b182-75fc-4a52-9bf1-b67a048ec22c"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/BQfXbI4-mdHC"
+    }
+  }, {
+    "fullUrl": "urn:uuid:da56572a-8c9b-4fa6-a5b8-d0c89631b861",
+    "resource": {
+      "resourceType": "Location",
+      "id": "9x0kDGFAo5_E",
+      "name": "Hoofdgebouw",
+      "telecom": [ {
+        "system": "email",
+        "value": "hoofdgebouw@lindenstaete.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:1786b182-75fc-4a52-9bf1-b67a048ec22c"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/9x0kDGFAo5_E"
+    }
+  }, {
+    "fullUrl": "urn:uuid:1786b182-75fc-4a52-9bf1-b67a048ec22c",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "EWsHDTnWRDJI",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "10293800"
+      } ],
+      "active": true,
+      "name": "Zorggroep Lindenstaete",
+      "alias": [ "Lindenstaete" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "info@lindenstaete.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/EWsHDTnWRDJI"
+    }
+  } ]
+}

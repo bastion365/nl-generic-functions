@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script src="htmx.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header hx-get="header.html" hx-trigger="load"></header>
+        <main>
+            <nav hx-get="menu.html" hx-trigger="load"></nav>
+            <section id="content" hx-get="address-search.html" hx-trigger="load" hx-target="this"></section>
+        </main>
+    </body>
+</html>

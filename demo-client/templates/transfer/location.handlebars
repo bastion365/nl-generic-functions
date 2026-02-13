@@ -1,0 +1,33 @@
+<button
+  type="submit"
+  name="action"
+  value="back-to-healthcare-service"
+>
+  back
+</button>
+<input type="hidden" name="locationSelected" value="true" />
+
+<h2>Location</h2>
+
+<ul>
+  {{#each locationResults}}
+    <li>
+        <button
+            name="locationId"
+            value="{{this.id}}"
+            type="submit"
+        >
+            {{this.name}} ({{this.addressLine1}}, {{this.city}})
+        </button>
+    </li>
+  {{/each}}
+  <li>
+      <button
+          name="locationId"
+          value=""
+          type="submit"
+      >
+          No specific location
+      </button>
+  </li>
+</ul>

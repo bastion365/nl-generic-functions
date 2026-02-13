@@ -1,0 +1,22 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "urn:uuid:f36e73ea-7493-4cd1-b15d-ca11d8d17378",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "000000005-unauthoritative-{SALT}"
+                }],
+                "active": true,
+                "name": "Test unauthoritative {SALT}"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        }
+    ]
+}

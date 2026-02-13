@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:04331563-90ec-4dc3-8445-b4279369dd82",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "6h_sSA9uHTyh",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "11225700"
+      } ],
+      "active": true,
+      "name": "Thuiszorg Noordijk",
+      "alias": [ "Noordijk" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "contact@noordijkthuiszorg.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/6h_sSA9uHTyh"
+    }
+  } ]
+}

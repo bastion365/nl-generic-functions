@@ -1,0 +1,25 @@
+{
+  "name": "demo-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch src/app.js",
+    "client": "node src/app.js"
+  },
+  "author": "Bastion 365",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/static": "^8.3.0",
+    "escape-html": "^1.0.3",
+    "handlebars": "^4.7.8",
+    "fastify": "^5.6.2",
+    "jsonata": "^2.1.0"
+  }
+}

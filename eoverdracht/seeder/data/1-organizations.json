@@ -1,0 +1,69 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:a92b72b5-ba21-4165-90fb-8fbaf77d941d",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "-4tclsDeSC1U",
+                "meta": {
+                    "profile": ["http://fhir.nl/fhir/StructureDefinition/nl-core-organization"]
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "62939359"
+                    }
+                ],
+                "name": "Voorhoutzorg"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/-4tclsDeSC1U"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ce7e927d-76c3-4438-9db3-a961b2e8ba8b",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "SMnIqHF7bCYC",
+                "meta": {
+                    "profile": ["http://fhir.nl/fhir/StructureDefinition/nl-core-organization"]
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "11225500"
+                    }
+                ],
+                "name": "Kinderzorg Noordzee"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/SMnIqHF7bCYC"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:0e00e419-fdc7-4ed3-9316-33bd74a3cd7e",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "SMnIqHF7bCYC",
+                "meta": {
+                    "profile": ["http://fhir.nl/fhir/StructureDefinition/nl-core-organization"]
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "23456789"
+                    }
+                ],
+                "name": "Zorgverzekeringen B.V."
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/szecxtGBw8Ol"
+            }
+        }
+    ]
+}

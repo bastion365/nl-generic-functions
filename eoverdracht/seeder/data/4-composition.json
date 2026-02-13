@@ -1,0 +1,188 @@
+{
+    "resourceType": "Composition",
+    "id": "y7FPalELKPFA",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults"
+        ]
+    },
+    "status": "final",
+    "type": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "11171000146100"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/gqolu4dYHR01"
+    },
+    "date": "2026-01-19",
+    "author": [
+        {
+            "reference": "Practitioner/o.MH-xOk8PuE"
+        }
+    ],
+    "title": "Nursing handoff",
+    "section": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate",
+                    "valueDateTime": "2026-01-19"
+                }
+            ],
+            "title": "Administrative data",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "405624007"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Personal data",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "302147001"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Coverage/wJwGIiIyyfUF"
+                        }
+                    ]
+                },
+                {
+                    "title": "Sending organization",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "185362004"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Organization/-4tclsDeSC1U"
+                        },
+                        {
+                            "reference": "Practitioner/o.MH-xOk8PuE"
+                        },
+                        {
+                            "reference": "PractitionerRole/XKgcBQoPxd7H"
+                        }
+                    ]
+                },
+                {
+                    "title": "Receiving organization",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "275645009"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "identifier": {
+                                "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                                "value": "90000380"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Medical context",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "371524004"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Practitioner",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "405623001"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Practitioner/o.MH-xOk8PuE"
+                        },
+                        {
+                            "reference": "PractitionerRole/XKgcBQoPxd7H"
+                        }
+                    ]
+                },
+                {
+                    "title": "Medical diagnosis",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "52870002"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Condition/ilG8z-SNf5zB"
+                        }
+                    ]
+                },
+                {
+                    "title": "Measurements",
+                    "code": {
+                        "coding": [
+                            {
+                            "system": "http://snomed.info/sct",
+                            "code": "363788007"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Observation/t7Fq7c9EL0nL"
+                        },
+                        {
+                            "reference": "Observation/l34EQgxzzphR"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Care plan",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "773130005"
+                    }
+                ]
+            },
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Please continue monitoring blood pressure daily. Inform the physician if systolic blood pressure exceeds 160 mmHg.</p></div>"
+            }
+        }
+    ]
+}

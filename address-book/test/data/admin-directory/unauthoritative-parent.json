@@ -1,0 +1,47 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:988ee54c-0d89-42fa-ba99-97810567a1ef",
+            "resource": {
+                "resourceType": "Organization",
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "000000006-unauthoritative-{SALT}"
+                    }
+                ],
+                "active": true,
+                "name": "Test unauthoritative {SALT}"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:0a42fed2-be71-4cc9-9088-3c4433ddcaff",
+            "resource": {
+                "resourceType": "Organization",
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "000000006-unauthoritative-parent-{SALT}"
+                    }
+                ],
+                "active": true,
+                "name": "Test unauthoritative parent {SALT}",
+                "partOf": [
+                    {
+                        "reference": "urn:uuid:988ee54c-0d89-42fa-ba99-97810567a1ef"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        }
+    ]
+}

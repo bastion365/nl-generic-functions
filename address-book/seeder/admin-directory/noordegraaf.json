@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:04331563-90ec-4dc3-8445-b4279369dd82",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "ajO0WlJSZhTM",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "11225600"
+      } ],
+      "active": true,
+      "name": "Zorgpraktijk Noordegraaf",
+      "alias": [ "Noordegraaf" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "info@noordegraafzorg.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/ajO0WlJSZhTM"
+    }
+  } ]
+}

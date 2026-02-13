@@ -1,0 +1,19 @@
+(
+    $identifier := [$filter($.identifier, function($i) {$i.use = "official"}), $.identifier[0]][0];
+
+    {
+        "objectClass": [
+            'top',
+            'uidObject',
+            'organization',
+            'HCRegulatedOrganization',
+            'inetOrgRecipient',
+            'namedObject'
+        ],
+        "uid": $join([$identifier.system, ":", $identifier.value]),
+        "cn": $.name,
+        "o": $.name,
+        "mail": $filter($.telecom, function ($t) {$t.system = "email"})[0].value,
+        "telephoneNumber": $filter($.telecom, function ($t) {$t.system = "phone"})[0].value
+    }
+)

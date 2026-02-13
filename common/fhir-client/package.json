@@ -1,0 +1,12 @@
+{
+    "name": "@bastion365/fhir-client",
+    "version": "0.0.1",
+    "description": "FHIR client",
+    "main": "index.js",
+    "author": "Ernst Lawende",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "dependencies": {}
+}

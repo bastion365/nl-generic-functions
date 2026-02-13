@@ -1,0 +1,277 @@
+:root {
+    color: #213547;
+    background-color: #ffffff;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #747bff;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    padding: 6pt;
+    border-bottom: 1px solid #ccc;
+}
+
+nav {
+    padding: 6pt;
+    border-right: 1px solid #ccc;
+}
+
+section {
+    padding: 6pt;
+}
+
+h1 {
+    font-size: 1.6em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1em;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(min-content, 20vw) 1fr;
+    height: 100vh;
+}
+
+label {
+    font-weight: 500;
+}
+
+.search-button {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background: #ddd;
+}
+
+.results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.line1 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.type-icon {
+    font-size: 1.2rem;
+}
+
+.line2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 1.6rem; /* indent under icon */
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.email-icon {
+    font-size: 0.9rem;
+}
+
+form input,
+form select,
+form button {
+    margin: 4px 0;
+    display: block;
+}
+
+.endpoint-row,
+.location-row,
+.healthcare-service-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.endpoint-row > .endpoint-fields,
+.location-row > .location-fields,
+.healthcare-service-row input {
+    flex: 1;
+}
+
+.location-fields,
+.endpoint-fields {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-row-gap: 8px;
+    column-gap: 12px;
+    align-items: start;
+}
+
+.location-fields label,
+.endpoint-fields label {
+    grid-column: 1;
+}
+
+.location-fields *,
+.endpoint-fields * {
+    grid-column: 2;
+}
+
+.endpoint-row select,
+.healthcare-service-row select {
+    min-width: 12em;
+    flex: 1;
+}
+
+button[type='button'] {
+    background: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+button[type='button']:hover {
+    background: #ddd;
+}
+
+button[type='submit'] {
+    background: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+button[type='submit']:hover {
+    background: #ddd;
+}
+
+#org-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr 1fr;
+  grid-row-gap: 8px;
+  column-gap: 12px;
+  align-items: start;
+}
+
+/* form fields (grid columns 1 and 2) */
+#org-form {
+  display: contents; /* <-- key trick */
+}
+
+#org-form > label {
+  grid-column: 1;
+}
+
+#org-form > input,
+#org-form > div,
+#org-form > * {
+  grid-column: 2;
+}
+
+#org-form > #endpoints,
+#org-form > #locations {
+    display: block;
+}
+
+/* search box goes in column 3, aligned with the “Part of” row */
+#parent-organization-search {
+  grid-column: 3;
+  grid-row: 4 / 14; /* row where "Part of" label/input sit */
+  /* border: 1px solid #ccc;
+  padding: 8px;
+  background: #fafafa;
+  border-radius: 4px; */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+fieldset {
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+fieldset legend {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+    font-weight: normal;
+}
+
+.callout {
+    position: relative;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.callout::after {
+    content: "";
+    position: absolute;
+    top: 1px;            /* vertical alignment */
+    left: -12px;            /* pull arrow outside the box */
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #f7f7f7;   /* same as background */
+}
+
+.callout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -14px;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 14px solid #ddd; /* same as border color */
+}

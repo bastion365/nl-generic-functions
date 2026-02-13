@@ -1,0 +1,20 @@
+{
+  "name": "address-book",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch src/app.js",
+    "client": "node src/app.js"
+  },
+  "author": "Bastion 365",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}

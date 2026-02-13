@@ -1,0 +1,61 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:be8fe88c-8ced-4b74-ac78-5cf47df8bdf9",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "o.MH-xOk8PuE",
+                "meta": {
+                    "profile": ["http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"]
+                },
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "de Vries",
+                        "given": ["Alice"]
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/o.MH-xOk8PuE"
+            }
+        },
+
+        {
+            "fullUrl": "urn:uuid:b22ea9e7-b68d-4bae-b6e6-46417ec22f49",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "XKgcBQoPxd7H",
+                "meta": {
+                    "profile": ["http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"]
+                },
+                "practitioner": {
+                    "reference": "urn:uuid:be8fe88c-8ced-4b74-ac78-5cf47df8bdf9",
+                    "display": "Alice de Vries"
+                },
+                "organization": {
+                    "reference": "Organization/-4tclsDeSC1U",
+                    "display": "Voorhoutzorg"
+                },
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
+                                "code": "01.019",
+                                "display": "Medisch specialisten, kindergeneeskunde"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PractitionerRole/XKgcBQoPxd7H"
+            }
+        }
+    ]
+}

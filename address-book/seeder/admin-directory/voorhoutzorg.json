@@ -1,0 +1,157 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:010ed8a4-e72f-4f20-96ea-b0bbae4c5f6c",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fnCsadsu3XAL",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "62939359"
+                }],
+                "active": true,
+                "name": "Voorhoutzorg",
+                "telecom": [{
+                    "system": "phone",
+                    "value": "088 1234567"
+                }, {
+                    "system": "email",
+                    "value": "info@voorhoutzorg.nl"
+                }, {
+                    "system": "url",
+                    "value": "https://voorhoutzorg.nl"
+                }],
+                "endpoint": [
+                    {
+                        "reference": "urn:uuid:018b5012-aa11-44c7-8e47-701a6132b5b9"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/fnCsadsu3XAL"
+            }
+        }, {
+            "fullUrl": "urn:uuid:018b5012-aa11-44c7-8e47-701a6132b5b9",
+            "resource": {
+                "resourceType": "Endpoint",
+                "id": "YStCUDKWYvde",
+                "connectionType": {
+                    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code": "hl7-fhir-rest",
+                    "display": "HL7 FHIR"
+                },
+                "payloadType": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://nuts-foundation.github.io/nl-generic-functions-ig/CodeSystem/nl-gf-data-exchange-capabilities",
+                                "code": "http://nictiz.nl/fhir/CapabilityStatement/eOverdracht-servercapabilities",
+                                "display": "Transfer of Care - eOverdracht Server"
+                            }
+                        ]
+                    }
+                ],
+                "address": "https://mtls.fort365.net/eoverdracht-poc"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Endpoint/YStCUDKWYvde"
+            }
+        }, {
+            "resource": {
+                "resourceType": "Location",
+                "id": "jJJSN11i43M8",
+                "name": "Locatie Voorhout",
+                "telecom": [{
+                    "system": "email",
+                    "value": "locatie-voorhout@voorhoutzorg.nl"
+                }],
+                "address": {
+                    "type": "physical",
+                    "line": ["Voorhout 1"],
+                    "city": "Den Haag",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:010ed8a4-e72f-4f20-96ea-b0bbae4c5f6c"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Location/jJJSN11i43M8"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:82dcb086-52e0-428f-8f56-6aa16443c27c",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "id": "MVJTifnoJQ0H",
+                "active": true,
+                "providedBy": {
+                    "reference": "urn:uuid:010ed8a4-e72f-4f20-96ea-b0bbae4c5f6c"
+                },
+                "type": [ {
+                    "coding": [ {
+                        "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                        "code": "cardiology",
+                        "display": "Cardiology"
+                    } ]
+                } ],
+                "name": "cardiology",
+                "comment": "Heart"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "HealthcareService/MVJTifnoJQ0H"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:332e1b99-5cf0-4e56-8152-6582d7209013",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "mkMF5zirpxfZ",
+                "identifier": [ {
+                    "system": "agb",
+                    "value": "32462387"
+                } ],
+                "name": [ {
+                    "family": "Miles",
+                    "given": [ "Richard" ]
+                } ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/mkMF5zirpxfZ"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "yx4GRhIkYkSl",
+                "practitioner": {
+                    "reference": "urn:uuid:332e1b99-5cf0-4e56-8152-6582d7209013"
+                },
+                "organization": {
+                    "reference": "urn:uuid:010ed8a4-e72f-4f20-96ea-b0bbae4c5f6c"
+                },
+                "healthcareService": [ {
+                    "reference": "urn:uuid:82dcb086-52e0-428f-8f56-6aa16443c27c"
+                } ],
+                "code": [ {
+                    "coding": [ {
+                        "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                        "code": "doctor",
+                        "display": "Doctor"
+                    } ]
+                } ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "PractitionerRole/yx4GRhIkYkSl"
+            }
+        }
+    ]
+}

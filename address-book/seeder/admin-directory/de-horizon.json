@@ -1,0 +1,62 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:d5d53cfe-d600-490c-9343-6867b3025345",
+    "resource": {
+      "resourceType": "Location",
+      "id": "v2RuA4WVZ-RW",
+      "name": "Oost",
+      "telecom": [ {
+        "system": "email",
+        "value": "oost@mcdehorizon.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:6b94d0de-d2c2-4a33-a60f-5a1272cb869a"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/v2RuA4WVZ-RW"
+    }
+  }, {
+    "fullUrl": "urn:uuid:90952c08-f810-4ffc-8cea-1338d42accaf",
+    "resource": {
+      "resourceType": "Location",
+      "id": "FxiVDqpDa1Tj",
+      "name": "West",
+      "telecom": [ {
+        "system": "email",
+        "value": "west@mcdehorizon.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:6b94d0de-d2c2-4a33-a60f-5a1272cb869a"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/FxiVDqpDa1Tj"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6b94d0de-d2c2-4a33-a60f-5a1272cb869a",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "7MyeKlUP50P5",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "56473800"
+      } ],
+      "active": true,
+      "name": "Medisch Centrum De Horizon",
+      "alias": [ "De Horizon", "Horizon" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "contact@mcdehorizon.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/7MyeKlUP50P5"
+    }
+  } ]
+}

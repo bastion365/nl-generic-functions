@@ -1,0 +1,62 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:cb1378a8-d2f6-4119-8140-9d3b776e98bf",
+    "resource": {
+      "resourceType": "Location",
+      "id": "pWiVWLRrlxc4",
+      "name": "Buitenplein",
+      "telecom": [ {
+        "system": "email",
+        "value": "buitenplein@oudegracht.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:c7b2ef16-89f7-4a30-94de-c128fdee284a"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/pWiVWLRrlxc4"
+    }
+  }, {
+    "fullUrl": "urn:uuid:ad6c2b45-3eca-42e5-8fea-ff28b0b43989",
+    "resource": {
+      "resourceType": "Location",
+      "id": "7MyeKlUP50P5",
+      "name": "Binnenhof",
+      "telecom": [ {
+        "system": "email",
+        "value": "binnenhof@oudegracht.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:c7b2ef16-89f7-4a30-94de-c128fdee284a"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/7MyeKlUP50P5"
+    }
+  }, {
+    "fullUrl": "urn:uuid:c7b2ef16-89f7-4a30-94de-c128fdee284a",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "sgIJRI77llGe",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "44556600"
+      } ],
+      "active": true,
+      "name": "Woonzorgcentrum De Oude Gracht",
+      "alias": [ "De Oude Gracht", "Oude Gracht" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "info@oudegracht.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/sgIJRI77llGe"
+    }
+  } ]
+}

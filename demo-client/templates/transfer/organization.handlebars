@@ -1,0 +1,26 @@
+<h2>Organization</h2>
+
+<label for="organizationName">Name</label>
+<input id="organizationName" name="organizationName" type="text" value="{{organizationName}}" />
+
+<button type="submit" class="search-button">🔍 Search</button>
+
+{{#if (length organizationResults)}}
+    <ul>
+    {{#each organizationResults}}
+        <li>
+            <button
+                name="organizationId"
+                value="{{this.id}}"
+                type="submit"
+            >
+                {{this.name}}
+            </button>
+        </li>
+    {{/each}}
+    </ul>
+{{else}}
+    {{#if organizationName}}
+        <p>No results</p>
+    {{/if}}
+{{/if}}

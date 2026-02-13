@@ -1,0 +1,327 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "0qvjEmTI3frQ",
+                "name": "Kinderzorg Noordzee",
+                "alias": ["Noordzee"],
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "11225500"
+                    }
+                ],
+                "active": true,
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+                                "code": "JGZ",
+                                "display": "Jeugdgezondheidszorg"
+                            }
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "receptie@kinderzorgnoordzee.example.com"
+                    }
+                ],
+                "endpoint": [
+                    {
+                        "reference": "urn:uuid:2c5078ab-e073-4c45-8765-60ee87c44775"
+                    },
+                    {
+                        "reference": "urn:uuid:2c5078ab-e073-4c45-8765-60ee87c44776"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/0qvjEmTI3frQ"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2c5078ab-e073-4c45-8765-60ee87c44775",
+            "resource": {
+                "resourceType": "Endpoint",
+                "id": "32zOi3HklGFt",
+                "connectionType": {
+                    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code": "hl7-fhir-rest",
+                    "display": "HL7 FHIR"
+                },
+                "payloadType": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://nuts-foundation.github.io/nl-generic-functions-ig/CodeSystem/nl-gf-data-exchange-capabilities",
+                                "code": "http://nictiz.nl/fhir/CapabilityStatement/bgz2017-servercapabilities",
+                                "display": "BGZ Server"
+                            }
+                        ]
+                    }
+                ],
+                "address": "https://kinderzorgnoordzee.example.com/fhir"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Endpoint/32zOi3HklGFt"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2c5078ab-e073-4c45-8765-60ee87c44776",
+            "resource": {
+                "resourceType": "Endpoint",
+                "id": "rvgay8rW-10b",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2025-12-12T15:35:04.869+00:00"
+                },
+                "connectionType": {
+                    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code": "dicom-wado-rs",
+                    "display": "DICOM WADO-RS"
+                },
+                "address": "https://kinderzorgnoordzee.example.com/dicom"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Endpoint/rvgay8rW-10b"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3799f348-353a-4ead-83ca-606594d259ee",
+            "resource": {
+                "resourceType": "Location",
+                "id": "pHfbaNHgTCYy",
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:uuid:2cd70683-488d-4972-a4d4-2e5c4001acae"
+                    }
+                ],
+                "name": "Paviljoen B",
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "facilities@kinderzorgnoordzee.example.com"
+                    }
+                ],
+                "address": {
+                    "line": ["Lange Dijk 321"],
+                    "city": "Enkhuizen",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Location/pHfbaNHgTCYy"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2d7ccc4d-65ac-43f1-a5b6-a39ae46d6124",
+            "resource": {
+                "resourceType": "Location",
+                "id": "M3pDNgotEjIg",
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:uuid:30c1f4a1-7ea3-4c64-9238-f57c499deb4e"
+                    }
+                ],
+                "name": "Paviljoen A",
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "facilities@kinderzorgnoordzee.example.com"
+                    }
+                ],
+                "address": {
+                    "line": ["De Weide 2a"],
+                    "city": "Hoorn",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Location/M3pDNgotEjIg"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d35df479-dfb3-461a-a609-c63b2c2b22f9",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "id": "8rTvI6MLbo7h",
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:uuid:3273327d-f188-4bc5-b7a8-3de793562c61"
+                    }
+                ],
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                            "code": "39",
+                            "display": "Occasional Child Care"
+                        }
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "bbrown@docbottest.com"
+                    }
+                ],
+                "providedBy": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                },
+                "location": [
+                    {
+                        "reference": "urn:uuid:2d7ccc4d-65ac-43f1-a5b6-a39ae46d6124"
+                    },
+                    {
+                        "reference": "urn:uuid:3799f348-353a-4ead-83ca-606594d259ee"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "HealthcareService/8rTvI6MLbo7h"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:fac06850-a338-410f-8d0a-bc18e09cd42a",
+            "resource": {
+                "resourceType": "Endpoint",
+                "id": "O1fKEj5dU8gQ",
+                "status": "active",
+                "connectionType": {
+                    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code": "hl7-fhir-rest"
+                },
+                "name": "eOverdracht Notification Endpoint",
+                "managingOrganization": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                },
+                "payloadType": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://nuts.nl/fhir/CodeSystem/endpoint-payload-type",
+                                "code": "eOverdracht-notification",
+                                "display": "eOverdracht notification"
+                            }
+                        ]
+                    }
+                ],
+                "address": "https://zorg.kinderzorgnoordzee.example.com/eoverdracht/notify"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Endpoint/O1fKEj5dU8gQ"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ab564360-297f-4870-931d-14cd6b7f808d",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "id": "q3vE6mTx7qSp",
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:uuid:791d0670-5bd6-4cf5-8dd9-97d22ce41a1b"
+                    }
+                ],
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                            "code": "42",
+                            "display": "Parenting/Family Support/Education"
+                        }
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "bbrown@docbottest.com"
+                    }
+                ],
+                "providedBy": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                },
+                "location": [
+                    {
+                        "reference": "urn:uuid:2d7ccc4d-65ac-43f1-a5b6-a39ae46d6124"
+                    },
+                    {
+                        "reference": "urn:uuid:3799f348-353a-4ead-83ca-606594d259ee"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "HealthcareService/q3vE6mTx7qSp"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:e954fc10-8d64-4af5-babf-59933c831003",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "id": "2KC7KEcEeuey",
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:uuid:ea7e6044-6fc9-418f-8388-df8ec2790aba"
+                    }
+                ],
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                            "code": "45",
+                            "display": "Toy Library"
+                        }
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "speelotheek@kinderzorgnoordzee.example.com"
+                    }
+                ],
+                "providedBy": {
+                    "reference": "urn:uuid:ee390cc2-5819-4db0-a305-7e2c9154ba73"
+                },
+                "location": [
+                    {
+                        "reference": "urn:uuid:3799f348-353a-4ead-83ca-606594d259ee"
+                    }
+                ],
+                "endpoint": [
+                    {
+                        "reference": "urn:uuid:fac06850-a338-410f-8d0a-bc18e09cd42a"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "HealthcareService/2KC7KEcEeuey"
+            }
+        }
+    ]
+}

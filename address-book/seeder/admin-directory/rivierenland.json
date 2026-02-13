@@ -1,0 +1,40 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:19f9d44f-b088-42d7-9c9a-63d75323548b",
+    "resource": {
+      "resourceType": "Location",
+      "id": "jPQ2b7gIwxdE",
+      "name": "Damstraat",
+      "managingOrganization": {
+        "reference": "urn:uuid:0d681a5b-77ba-4857-880f-ae6fc1830a2f"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/jPQ2b7gIwxdE"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0d681a5b-77ba-4857-880f-ae6fc1830a2f",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "YPDJxsthGy2V",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "99887700"
+      } ],
+      "active": true,
+      "name": "Zorg & Welzijn Rivierenland",
+      "alias": [ "Rivierenland" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "administratie@zwrivierenland.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/YPDJxsthGy2V"
+    }
+  } ]
+}

@@ -1,0 +1,50 @@
+<div class="endpoint-row">
+  <div class="endpoint-fields">
+    <label>Name</label>
+    <input name="endpoint_name[]">
+    <label>Connection type</label>
+    <select name="endpoint_type[]">
+      <option value='' {{selected this.type ''}}></option>
+      <option value='IHE XCPD' {{selected this.type 'IHE XCPD'}}>IHE XCPD</option>
+      <option value='IHE XCA' {{selected this.type 'IHE XCA'}}>IHE XCA</option>
+      <option value='IHE XDR' {{selected this.type 'IHE XDR'}}>IHE XDR</option>
+      <option value='IHE XDS' {{selected this.type 'IHE XDS'}}>IHE XDS</option>
+      <option value='IHE IID' {{selected this.type 'IHE IID'}}>IHE IID</option>
+      <option value='DICOM WADO-RS' {{selected this.type 'DICOM WADO-RS'}}>DICOM WADO-RS</option>
+      <option value='DICOM QIDO-RS' {{selected this.type 'DICOM QIDO-RS'}}>DICOM QIDO-RS</option>
+      <option value='DICOM STOW-RS' {{selected this.type 'DICOM STOW-RS'}}>DICOM STOW-RS</option>
+      <option value='DICOM WADO-URI' {{selected this.type 'DICOM WADO-URI'}}>DICOM WADO-URI</option>
+      <option value='HL7 FHIR' {{selected this.type 'HL7 FHIR'}}>HL7 FHIR</option>
+      <option value='HL7 FHIR Messaging' {{selected this.type 'HL7 FHIR Messaging'}}>HL7 FHIR Messaging</option>
+      <option value='HL7 v2 MLLP' {{selected this.type 'HL7 v2 MLLP'}}>HL7 v2 MLLP</option>
+      <option value='Secure email' {{selected this.type 'Secure email'}}>Secure email</option>
+      <option value='Direct Project' {{selected this.type 'Direct Project'}}>Direct Project</option>
+    </select>
+    <label>Payload type</label>
+    <select name="endpoint_payload[]">
+      <option value='' {{selected this.payload ''}}></option>
+      <option value='Care Services Directory for Update Client' {{selected this.payload ''}}>Care Services Directory for Update Client</option>
+      <option value='Transfer of Care - eOverdracht Notification' {{selected this.payload ''}}>Transfer of Care - eOverdracht Notification</option>
+      <option value='Twiin - TA Notification' {{selected this.payload ''}}>Twiin - TA Notification</option>
+      <option value='Nuts OAuth endpoint' {{selected this.payload ''}}>Nuts OAuth endpoint</option>
+      <option value='Transfer of Care - eOverdracht Server' {{selected this.payload ''}}>Transfer of Care - eOverdracht Server</option>
+      <option value='BGZ Server' {{selected this.payload ''}}>BGZ Server</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Serve medication data&#39; transaction (system role: MP-MGB).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Serve medication data&#39; transaction (system role: MP-MGB).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive medication data&#39; transaction (system role: MP-MGO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive medication data&#39; transaction (system role: MP-MGO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Serve medication overview&#39; transaction (system role: MP-MOB).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Serve medication overview&#39; transaction (system role: MP-MOB).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive medication overview&#39; transaction (system role: MP-MOO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive medication overview&#39; transaction (system role: MP-MOO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive medication prescription&#39; transaction (system role: MP-VOO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive medication prescription&#39; transaction (system role: MP-VOO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive medication prescription processing&#39; transaction (system role: MP-VAO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive medication prescription processing&#39; transaction (system role: MP-VAO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive proposal dispense request&#39; transaction (system role: MP-VVO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive proposal dispense request&#39; transaction (system role: MP-VVO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive reply proposal dispense request&#39; transaction (system role: MP-VVS).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive reply proposal dispense request&#39; transaction (system role: MP-VVS).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive proposal medication agreement&#39; transaction (system role: MP-VMO).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive proposal medication agreement&#39; transaction (system role: MP-VMO).</option>
+      <option value='Minimal requirements for a server to fulfill the &#39;Receive reply proposal medication agreement&#39; transaction (system role: MP-VMS).' {{selected this.payload ''}}>Minimal requirements for a server to fulfill the &#39;Receive reply proposal medication agreement&#39; transaction (system role: MP-VMS).</option>
+    </select>
+    <label>Address</label>
+    <input name="endpoint_value[]">
+  </div>
+  <button type="button"
+          hx-get="organization/row/endpoint/remove"
+          hx-target="closest .endpoint-row"
+          hx-swap="outerHTML">✖</button>
+</div>

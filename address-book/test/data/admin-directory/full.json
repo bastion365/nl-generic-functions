@@ -1,0 +1,187 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:de9ba89a-8934-4423-b3fc-ba893eaf5cfa",
+            "resource": {
+                "resourceType": "Organization",
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "000000003-full-{SALT}"
+                    }
+                ],
+                "active": true,
+                "name": "Organization 3",
+                "endpoint": [
+                    {
+                        "reference": "urn:uuid:e370cc6b-2be1-495b-affb-eb2036c10607"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3d5cdfec-4100-44a1-9f0e-ac8d88c75920",
+            "resource": {
+                "resourceType": "Organization",
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "000000003-cardiology-{SALT}"
+                    }
+                ],
+                "active": true,
+                "name": "Cardiology",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "088 1234568"
+                    },
+                    {
+                        "system": "email",
+                        "value": "cardiology@organization3.example.com"
+                    }
+                ],
+                "partOf": {
+                    "reference": "urn:uuid:de9ba89a-8934-4423-b3fc-ba893eaf5cfa"
+                }
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:a72fdd68-395f-4589-9e62-4ec9e131dcef",
+            "resource": {
+                "resourceType": "Location",
+                "name": "Teststraat",
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "teststraat@organization3.example.com"
+                    }
+                ],
+                "address": {
+                    "type": "physical",
+                    "line": ["Teststraat 1"],
+                    "city": "Juinen",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:de9ba89a-8934-4423-b3fc-ba893eaf5cfa"
+                }
+            },
+            "request": {
+                "method": "POST",
+                "url": "Location"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:1ed8cfc9-3aab-4cdd-8ebf-9589a5121dc3",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "name": "Cardiology Service",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "088 1234568"
+                    }
+                ],
+                "location": [
+                    {
+                        "reference": "urn:uuid:a72fdd68-395f-4589-9e62-4ec9e131dcef"
+                    }
+                ],
+                "providedBy": {
+                    "reference": "urn:uuid:3d5cdfec-4100-44a1-9f0e-ac8d88c75920"
+                }
+            },
+            "request": {
+                "method": "POST",
+                "url": "HealthcareService"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:61662afb-062c-44be-934c-600cc480bb99",
+            "resource": {
+                "resourceType": "Practitioner",
+                "name": [
+                    {
+                        "family": "Doe",
+                        "given": ["John"]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "088 1234567"
+                    },
+                    {
+                        "system": "email",
+                        "value": "john.doe@organization3.example.com"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:a5bdc8cc-4eac-4f52-b65e-c82ad0bc42bd",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "practitioner": {
+                    "reference": "urn:uuid:61662afb-062c-44be-934c-600cc480bb99"
+                },
+                "organization": {
+                    "reference": "urn:uuid:3d5cdfec-4100-44a1-9f0e-ac8d88c75920"
+                },
+                "code": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "408467006",
+                                "display": "Cardiologist"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "PractitionerRole"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:e370cc6b-2be1-495b-affb-eb2036c10607",
+            "resource": {
+                "resourceType": "Endpoint",
+                "status": "active",
+                "connectionType": {
+                    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code": "dicom-wado-rs"
+                },
+                "name": "DICOM WADO-RS endpoint",
+                "payloadType": [
+                    {
+                        "text": "DICOM WADO-RS"
+                    }
+                ],
+                "payloadMimeType": ["application/dicom+json", "application/dicom+xml"],
+                "address": "https://dicom.organization3.example.com/wado-rs"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Endpoint"
+            }
+        }
+    ]
+}

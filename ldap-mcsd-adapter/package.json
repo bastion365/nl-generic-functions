@@ -1,0 +1,20 @@
+{
+  "name": "ldap-mcsd-adapter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch src/app.js",
+    "server": "node src/app.js"
+  },
+  "author": "Bastion 365",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "jsonata": "^2.1.0"
+  }
+}
