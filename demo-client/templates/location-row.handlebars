@@ -1,0 +1,22 @@
+<div class="location-row">
+  <div class="location-fields">
+    <label>Name</label>
+    <input name="location_name[]">
+    <label>Email</label>
+    <input name="location_email[]">
+    <label>Address</label>
+    <input name="location_address_line1[]">
+    <input name="location_address_line2[]">
+    <label>City</label>
+    <input name="location_city[]">
+    <label>Country</label>
+    <select name="location_country[]">
+      <option value=""></option>
+      <option value="nl">Netherlands, the</option>
+    </select>
+  </div>
+  <button type="button"
+          hx-get="organization/row/location/remove"
+          hx-target="closest .location-row"
+          hx-swap="outerHTML">✖</button>
+</div>

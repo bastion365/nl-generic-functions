@@ -1,0 +1,16 @@
+{
+    "name": "@bastion365/oplog",
+    "version": "0.0.1",
+    "description": "Operations log",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Ernst Lawende",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "dependencies": {
+        "pino": "^9.5.0",
+        "pino-pretty": "^11.3.0"
+    }
+}

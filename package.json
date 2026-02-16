@@ -1,0 +1,14 @@
+{
+    "name": "bastion365",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "address-book/test",
+        "address-book/update-client",
+        "common/fetch",
+        "common/fhir-client",
+        "common/oplog",
+        "demo-client",
+        "ldap-mcsd-adapter"
+    ]
+}

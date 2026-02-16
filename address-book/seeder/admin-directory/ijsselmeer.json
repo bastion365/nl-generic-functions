@@ -1,0 +1,44 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:e9667ab2-8472-4048-b286-4061f4a68cea",
+    "resource": {
+      "resourceType": "Location",
+      "id": "ZptvLDDqkD2Z",
+      "name": "Kliniek Stadshaven",
+      "telecom": [ {
+        "system": "email",
+        "value": "stadshaven@zorgpuntijsselmeer.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:98e43a83-4ed0-4cac-b92b-0c212346d1e2"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/ZptvLDDqkD2Z"
+    }
+  }, {
+    "fullUrl": "urn:uuid:98e43a83-4ed0-4cac-b92b-0c212346d1e2",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "pWiVWLRrlxc4",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "33557700"
+      } ],
+      "active": true,
+      "name": "Zorgpunt IJsselmeer",
+      "alias": [ "IJsselmeer" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "info@zorgpuntijsselmeer.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/pWiVWLRrlxc4"
+    }
+  } ]
+}

@@ -1,0 +1,44 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:ea283b89-a7a9-4692-9eda-9ac27026edf3",
+    "resource": {
+      "resourceType": "Location",
+      "id": "lREGKazT2T69",
+      "name": "Operahof",
+      "telecom": [ {
+        "system": "email",
+        "value": "operahof@thuiszorgamstelland.example.com"
+      } ],
+      "managingOrganization": {
+        "reference": "urn:uuid:534c1712-2a67-408f-bacb-adfd4f4627e0"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Location/lREGKazT2T69"
+    }
+  }, {
+    "fullUrl": "urn:uuid:534c1712-2a67-408f-bacb-adfd4f4627e0",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "vHEA--_lYEcj",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "22334400"
+      } ],
+      "active": true,
+      "name": "Thuiszorg Amstelland",
+      "alias": [ "Amstelland" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "service@thuiszorgamstelland.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/vHEA--_lYEcj"
+    }
+  } ]
+}

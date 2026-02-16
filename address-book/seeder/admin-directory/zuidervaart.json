@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:20ecf9dd-c156-46f0-b25a-decbc73cb70c",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "CoUEhyeAWRrk",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "55664400"
+      } ],
+      "active": true,
+      "name": "Paramedisch Centrum Zuidervaart",
+      "alias": [ "Zuidervaart" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "balie@pczuidervaart.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/CoUEhyeAWRrk"
+    }
+  } ]
+}

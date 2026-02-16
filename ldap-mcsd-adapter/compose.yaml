@@ -1,0 +1,49 @@
+services:
+  ldap:
+    build:
+      context: ./openldap
+    volumes:
+      - ./openldap/slapd.conf:/usr/etc/openldap/slapd.conf
+      - openldap-data:/usr/var/openldap-data
+      - slapd-sock:/var/run/slapd-sock
+
+  adapter:
+    build:
+      context: ..
+      additional_contexts:
+        monorepo: ..
+        common: ../common
+        ldap-mcsd-adapter: ../ldap-mcsd-adapter
+      dockerfile: ./ldap-mcsd-adapter/Dockerfile
+      args:
+        NODE_VERSION: "22.12"
+        OS_VERSION: bookworm
+        NODE_ENV: development
+    tty: true # To display colours in docker compose logs
+    entrypoint: ["node", "--watch", "./ldap-mcsd-adapter/src/app.js"]
+    environment:
+      - QUERY_DIRECTORY_BASE_URL=http://host.docker.internal:8080/query-directory
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ../package.json:/home/node/package.json
+      - ../package-lock.json:/home/node/package-lock.json
+      - ./:/home/node/ldap-mcsd-adapter
+      - /home/node/node_modules
+      - slapd-sock:/home/node/slapd-sock
+      - ../common/fetch:/home/node/common/fetch
+      - ../common/fhir-client:/home/node/common/fhir-client
+      - ../common/oplog:/home/node/common/oplog
+
+  nginx:
+    image: nginx:1.29
+    ports:
+      - 389:389
+      - 636:636
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./whitelist.conf:/etc/nginx/conf.d/whitelist.conf:ro
+      - ./cert:/etc/nginx/cert:ro
+volumes:
+  openldap-data:
+  slapd-sock:

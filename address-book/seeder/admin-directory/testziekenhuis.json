@@ -1,0 +1,105 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:e811b3a9-d463-4473-a478-bf97490f623e",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "OlYQtnT7NM7A",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "12345678"
+                }],
+                "active": true,
+                "name": "Test Ziekenhuis (in admin directory)",
+                "telecom": [{
+                    "system": "phone",
+                    "value": "088 1234567"
+                }, {
+                    "system": "email",
+                    "value": "info@testziekenhuis.example.com"
+                }, {
+                    "system": "url",
+                    "value": "https://testziekenhuis.example.com"
+                }],
+                "endpoint": [{
+                    "reference": "urn:uuid:13a302a6-203a-4890-8834-9491ebd4202f"
+                }]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/OlYQtnT7NM7A"
+            }
+        }, {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "pI3FiXp3nNoR",
+                "identifier": [{
+                    "system": "https://data.rijksoverheid.nl/ns/identifier/ura",
+                    "value": "URA123456789"
+                }],
+                "active": true,
+                "name": "Cardiologie",
+                "telecom": [{
+                    "system": "phone",
+                    "value": "088 1234568"
+                }, {
+                    "system": "email",
+                    "value": "cardiologie@testziekenhuis.example.com"
+                }],
+                "partOf": {
+                    "reference": "urn:uuid:e811b3a9-d463-4473-a478-bf97490f623e"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/pI3FiXp3nNoR"
+            }
+        }, {
+            "resource": {
+                "resourceType": "Location",
+                "id": "ADlbDIfGR04l",
+                "name": "Teststraat",
+                "telecom": [{
+                    "system": "email",
+                    "value": "teststraat@testziekenhuis.example.com"
+                }],
+                "address": {
+                    "type": "physical",
+                    "line": ["Teststraat 1"],
+                    "city": "Juinen",
+                    "country": "nl"
+                },
+                "managingOrganization": {
+                    "reference": "urn:uuid:e811b3a9-d463-4473-a478-bf97490f623e"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Location/ADlbDIfGR04l"
+            }
+        }, {
+            "fullUrl": "urn:uuid:13a302a6-203a-4890-8834-9491ebd4202f",
+            "resource": {
+                "resourceType": "Endpoint",
+                "id": "LPoIfqvOXGqf",
+                "status": "active",
+                "connectionType": {
+                    "system": "https://hl7.org/fhir/R4B/codesystem-endpoint-connection-type.html",
+                    "code": "direct-project",
+                    "display": "Direct Project"
+                },
+                "name": "Cardiologie (direct)",
+                "managingOrganization": {
+                    "reference": "urn:uuid:e811b3a9-d463-4473-a478-bf97490f623e"
+                },
+                "address": "mailto:cardiologie@direct.testziekenhuis.example.com"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Endpoint/LPoIfqvOXGqf"
+            }
+        }
+    ]
+}

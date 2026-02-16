@@ -1,0 +1,35 @@
+<button
+  type="submit"
+  name="action"
+  value="back-to-location"
+>
+  back
+</button>
+<input type="hidden" name="locationSelected" value="true" />
+
+<h2>Endpoint</h2>
+
+<ul>
+  {{#each endpointResults}}
+    <li>
+        <button
+            name="endpointId"
+            value="{{this.id}}"
+            type="submit"
+        >
+            Send as {{this.payload}} ({{this.value}})
+        </button>
+    </li>
+  {{/each}}
+  {{#if emailAddress}}
+    <li>
+        <button
+            name="endpointId"
+            value="email"
+            type="submit"
+        >
+            Send via {{emailAddress}}
+        </button>
+    </li>
+  {{/if}}
+</ul>

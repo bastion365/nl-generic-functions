@@ -1,0 +1,263 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf",
+            "resource": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "111222333"
+                    }
+                ],
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "Doe",
+                        "given": ["John"]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "2020-01-01"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Patient/gqolu4dYHR01"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:18b104f3-be20-4680-88e6-4c80cc9cdec9",
+            "resource": {
+                "resourceType": "Coverage",
+                "id": "wJwGIiIyyfUF",
+                "meta": {
+                    "profile": ["http://nictiz.nl/fhir/StructureDefinition/zib-Payer"]
+                },
+                "status": "active",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1",
+                            "code": "B",
+                            "display": "Basis"
+                        }
+                    ]
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf"
+                },
+                "period": {
+                    "end": "2099-12-31T00:00:00+01:00"
+                },
+                "payor": [
+                    {
+                        "reference": "Organization/szecxtGBw8Ol",
+                        "display": "Zorgverzekeringen B.V."
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Coverage/wJwGIiIyyfUF"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:92440634-4c76-4130-9f9c-f46d8db38f21",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "l34EQgxzzphR",
+                "meta": {
+                    "profile": ["http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure"]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "85354-9",
+                            "display": "Blood pressure panel with all children optional"
+                        }
+                    ],
+                    "text": "Blood pressure systolic & diastolic"
+                },
+                "subject": {
+                    "reference": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf"
+                },
+                "context": {
+                    "reference": "urn:uuid:83cdd269-782a-4833-9d1f-4604cbd3249a"
+                },
+                "effectiveDateTime": "2026-01-13T09:15:00+01:00",
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "8480-6",
+                                    "display": "Systolic blood pressure"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 160,
+                            "unit": "mmHg",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "8462-4",
+                                    "display": "Diastolic blood pressure"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 100,
+                            "unit": "mmHg",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Observation/l34EQgxzzphR"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:fc1fec5c-939e-4ad7-be5f-46280b4ab88e",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "t7Fq7c9EL0nL",
+                "meta": {
+                    "profile": ["http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight"]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29463-7",
+                            "display": "Body weight"
+                        }
+                    ],
+                    "text": "Body weight"
+                },
+                "subject": {
+                    "reference": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf"
+                },
+                "context": {
+                    "reference": "urn:uuid:83cdd269-782a-4833-9d1f-4604cbd3249a"
+                },
+                "effectiveDateTime": "2026-01-13T09:15:00+01:00",
+                "valueQuantity": {
+                    "value": 82.0,
+                    "unit": "kg",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Observation/t7Fq7c9EL0nL"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:8a633976-0f24-4073-a7a7-1933cfda1a70",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "ilG8z-SNf5zB",
+                "meta": {
+                    "profile": ["http://nictiz.nl/fhir/StructureDefinition/zib-Problem"]
+                },
+                "clinicalStatus": "active",
+                "verificationStatus": "confirmed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "38341003",
+                            "display": "Hypertensive disorder, systemic arterial (disorder)"
+                        }
+                    ],
+                    "text": "Hypertension"
+                },
+                "subject": {
+                    "reference": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf"
+                },
+                "onsetDateTime": "2024-11-01"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Condition/ilG8z-SNf5zB"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:83cdd269-782a-4833-9d1f-4604cbd3249a",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "k3WHBL4HdkXO",
+                "meta": {
+                    "profile": ["http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Encounter"]
+                },
+                "status": "finished",
+                "class": {
+                    "system": "http://hl7.org/fhir/v3/ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "urn:uuid:8d0205e7-6658-4806-a354-77c0eeaaa7bf"
+                },
+                "period": {
+                    "start": "2026-01-10T09:00:00+01:00",
+                    "end": "2026-01-10T09:30:00+01:00"
+                },
+                "diagnosis": [
+                  {
+                    "condition": {
+                        "reference": "Condition/ilG8z-SNf5zB"
+                    }
+                  }
+                ],
+                "serviceProvider": {
+                    "reference": "Organization/-4tclsDeSC1U",
+                    "display": "Voorhoutzorg"
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Encounter/k3WHBL4HdkXO"
+            }
+        }
+    ]
+}

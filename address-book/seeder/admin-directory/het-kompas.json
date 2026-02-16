@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "urn:uuid:ec25534b-691d-43f4-b14f-a897ecd88cd4",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "hCHp4VZeMJXO",
+      "identifier": [ {
+        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+        "value": "66778800"
+      } ],
+      "active": true,
+      "name": "Revalidatiecentrum Het Kompas",
+      "alias": [ "Het Kompas", "Kompas" ],
+      "telecom": [ {
+        "system": "email",
+        "value": "contact@hetkompas.example.com"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/hCHp4VZeMJXO"
+    }
+  } ]
+}

@@ -1,0 +1,26 @@
+<h2>Address Search</h2>
+
+<form hx-post="address/search" hx-target="#search-results">
+    <fieldset>
+        <legend>Search in</legend>
+
+        <label class="radio-option">
+            <input type="radio" name="directoryType" value="query" checked />
+            Query directory
+        </label>
+
+        <label class="radio-option">
+            <input type="radio" name="directoryType" value="admin" />
+            Admin directory
+        </label>
+    </fieldset>
+
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" />
+
+    <button type="submit" class="search-button">🔍 Search</button>
+</form>
+
+<hr />
+
+<div id="search-results"></div>

@@ -1,0 +1,27 @@
+<form
+  hx-post="transfer"
+  hx-target="#content"
+  hx-swap="innerHTML"
+>
+<input type="hidden" name="patientId" value="{{patientId}}" />
+{{#if (eq step "organization")}}
+    {{> organization}}
+{{else}}
+    <input type="hidden" name="organizationId" value="{{organizationId}}" />
+    {{#if (eq step "healthcare-service")}}
+        {{> healthcare-service}}
+    {{else}}
+        <input type="hidden" name="healthcareServiceId" value="{{healthcareServiceId}}" />
+        {{#if (eq step "location")}}
+            {{> location}}
+        {{else}}
+            <input type="hidden" name="locationSelected" value="true" />
+            {{#if (eq step "endpoint")}}
+                {{> endpoint}}
+            {{else}}
+                <p>Done</p>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+{{/if}}
+</form>

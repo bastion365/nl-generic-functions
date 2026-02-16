@@ -1,0 +1,9 @@
+<div id="parent-organization-selected" hx-swap-oob="true">
+  {{#if parent_name}}
+        {{parent_name}}
+    {{else}}
+        none
+    {{/if}}
+</div>
+
+<input type="hidden" id="parent-organization-id" name="parent_id" value="{{id}}" hx-swap-oob="true">

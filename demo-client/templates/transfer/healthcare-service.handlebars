@@ -1,0 +1,27 @@
+<button
+  type="submit"
+  name="action"
+  value="back-to-organization"
+>
+  back
+</button>
+
+<h2>Healthcare service</h2>
+
+{{#if (length healthcareServicesResults)}}
+    <ul>
+    {{#each healthcareServicesResults}}
+        <li>
+            <button
+                name="healthcareServiceId"
+                value="{{this.id}}"
+                type="submit"
+            >
+                {{this.type}}
+            </button>
+        </li>
+    {{/each}}
+    </ul>
+{{else}}
+    <p>No results</p>
+{{/if}}

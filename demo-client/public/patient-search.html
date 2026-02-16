@@ -1,0 +1,18 @@
+<h2>Patient Search</h2>
+
+<form hx-post="patient/search" hx-target="#search-results">
+    <label for="identifier">Identifier</label>
+    <input id="identifier" name="identifier" type="text" />
+    <label for="given">Given name</label>
+    <input id="given" name="given" type="text" />
+    <label for="family">Family name</label>
+    <input id="family" name="family" type="text" />
+    <label for="birthdate">Birthdate</label>
+    <input id="birthdate" name="birthdate" type="date" />
+
+    <button type="submit" class="search-button">🔍 Search</button>
+</form>
+
+<hr />
+
+<div id="search-results"></div>

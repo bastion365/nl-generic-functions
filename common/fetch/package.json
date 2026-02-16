@@ -1,0 +1,14 @@
+{
+    "name": "@bastion365/fetch",
+    "version": "0.0.1",
+    "description": "fetch",
+    "main": "index.js",
+    "author": "Ernst Lawende",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "dependencies": {
+        "@bastion365/oplog": "^0.0.1"
+    }
+}

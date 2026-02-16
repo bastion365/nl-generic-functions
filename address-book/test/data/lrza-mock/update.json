@@ -1,0 +1,55 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "urn:uuid:629a4425-09c3-4dc2-803d-33fff102e9aa",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "000000002-update-{SALT}"
+                }],
+                "active": true,
+                "name": "Organization 2",
+                "endpoint": [{
+                    "reference": "urn:uuid:0d60f13e-4eec-48eb-a9b3-a590922db9a3"
+                }]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        }, {
+            "resource": {
+                "resourceType" : "Endpoint",
+                "id" : "urn:uuid:0d60f13e-4eec-48eb-a9b3-a590922db9a3",
+                "meta" : {
+                    "profile" : ["http://nuts-foundation.github.io/nl-generic-functions-ig/StructureDefinition/nl-gf-endpoint"]
+                },
+                "status" : "active",
+                "connectionType" : {
+                    "system" : "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+                    "code" : "hl7-fhir-rest"
+                },
+                "name" : "Bastion 365 mCSD",
+                "managingOrganization" : {
+                    "reference" : "urn:uuid:629a4425-09c3-4dc2-803d-33fff102e9aa"
+                },
+                "payloadType" : [{
+                    "coding" : [{
+                        "system" : "http://nuts-foundation.github.io/nl-generic-functions-ig/CodeSystem/nl-gf-data-exchange-capabilities",
+                        "code" : "http://nuts-foundation.github.io/nl-generic-functions-ig/CapabilityStatement/nl-gf-admin-directory-update-client",
+                        "display" : "Care Services Directory for Update Client"
+                    }]
+                }],
+                "payloadMimeType" : ["application/fhir+json"],
+                "address" : "http://host.docker.internal:8080/admin-directory"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Endpoint"
+            }
+        }
+    ]
+}

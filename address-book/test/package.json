@@ -1,0 +1,15 @@
+{
+  "name": "address-book-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "node --test --test-concurrency=1"
+  },
+  "author": "Bastion 365",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  }
+}

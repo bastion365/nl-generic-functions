@@ -1,0 +1,22 @@
+{
+	"resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "urn:uuid:5eb60626-a0b8-4c31-b7ee-80052c9dc6dd",
+                "identifier": [{
+                    "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                    "value": "000000001-simple-{SALT}"
+                }],
+                "active": true,
+                "name": "Organization 1 (in admin directory)"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Organization"
+            }
+        }
+    ]
+}

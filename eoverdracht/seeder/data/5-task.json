@@ -1,0 +1,97 @@
+{
+    "resourceType": "Task",
+    "meta": {
+        "profile": ["http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task"]
+    },
+    "extension": [
+        {
+            "url": "http://nuts-foundation.github.io/nl-generic-functions-ig/StructureDefinition/task-stu3-location",
+            "valueReference": {
+                "identifier": {
+                    "system": "local",
+                    "value": "did:nuts:Eb1U3ap94wcziQhUfZSWJqqcuTj6SzJgGYhXKqWFC5Lv-47",
+                    "assigner": {
+                        "identifier": {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                        "code": "author",
+                                        "display": "author"
+                                    }
+                                ]
+                            },
+                            "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                            "value": "90000380"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "url": "http://nuts-foundation.github.io/nl-generic-functions-ig/StructureDefinition/task-stu3-healthcareservice",
+            "valueReference": {
+                "identifier": {
+                    "system": "local",
+                    "value": "did:nuts:Eb1U3ap94wcziQhUfZSWJqqcuTj6SzJgGYhXKqWFC5Lv-6VV",
+                    "assigner": {
+                        "identifier": {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                        "code": "author",
+                                        "display": "author"
+                                    }
+                                ]
+                            },
+                            "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                            "value": "90000380"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "id": "Pu5f14s9fIfG",
+    "status": "requested",
+    "intent": "order",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "308292007"
+            }
+        ]
+    },
+    "for": {
+        "reference": "Patient/gqolu4dYHR01"
+    },
+    "requester": {
+        "agent": {
+            "reference": "Organization/-4tclsDeSC1U"
+        }
+    },
+    "owner": {
+        "identifier": {
+            "system": "http://fhir.nl/fhir/NamingSystem/ura",
+            "value": "90000380"
+        }
+    },
+    "authoredOn": "2026-01-19T10:00:00+01:00",
+    "input": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "11171000146100"
+                    }
+                ]
+            },
+            "valueReference": {
+                "reference": "Composition/y7FPalELKPFA"
+            }
+        }
+    ]
+}
