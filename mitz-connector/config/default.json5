@@ -1,0 +1,23 @@
+{
+    connector: {
+        endpoint: 'https://tst-api.mijn-mitz.nl/tst-us/mitz/',
+        organizationUri: 'urn:oid:1.2.3',
+    },
+    patient: {
+        bsn: '900203638', // always allow
+        // bsn: '900203651', // always deny
+    },
+    consultingHealthcareProvider: {
+        uzi: '900027308',
+        role: '01.000', // arts
+        ura: '90000382',
+        healthcareFacilityTypeCode: 'Z3', // huisartspraktijk
+    },
+    resourceOwner: {
+        ura: '12345678',
+        healthcareFacilityTypeCode: 'V4', // ziekenhuis
+        gatewayUri: 'urn:oid:2.16.840.1.113883.2.4.3.239',
+        sourceSystemUri: 'urn:oid:2.16.840.1.113883.2.4.3.239.1.2.1',
+        notificationUrl: 'https://example.com/fhir/mitz',
+    },
+}

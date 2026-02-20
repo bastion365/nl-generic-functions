@@ -1,0 +1,24 @@
+{
+    "name": "@bastion365/mitz-connector",
+    "version": "0.0.1",
+    "description": "Localize medical data and verify consent using Mitz",
+    "main": "index.js",
+    "author": "Ernst Lawende",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@bastion365/fetch": "^0.0.1",
+        "@xmldom/xmldom": "^0.8.11",
+        "xml-crypto": "^6.1.2",
+        "xml2js": "^0.6.2",
+        "xmlbuilder2": "^4.0.3",
+        "xpath": "^0.0.34"
+    },
+    "devDependencies": {
+        "config": "^4.3.0",
+        "jsdoc-to-markdown": "^9.1.3"
+    }
+}

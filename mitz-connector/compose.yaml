@@ -1,0 +1,23 @@
+services:
+  test:
+    image: node:22.12-bookworm
+    profiles: ["aux"]
+    container_name: mitz-connector-test
+    volumes:
+      - ../:/app
+      - /app/mitz-connector/node_modules
+    working_dir: /app/mitz-connector
+    command: sh -c "npm ci && npx node --test"
+    environment:
+      - NODE_ENV=test
+  generate-docs:
+    image: node:22.12-bookworm
+    profiles: ["aux"]
+    container_name: mitz-connector-generate-docs
+    volumes:
+      - ../:/app
+      - /app/mitz-connector/node_modules
+    working_dir: /app/mitz-connector
+    command: sh -c "npm ci && npx jsdoc-to-markdown src/**/*.js > API.md"
+    environment:
+      - NODE_ENV=development
